@@ -4,7 +4,7 @@ Features: User Registration: Register a new user with name, email, password, and
 
 API End points:
 
-# users/register:[POST]:
+# users/register [POST]:
 
 1. Firstly imported a function "createPool" from Sql module and initialised the variable "pool" and passed the required arguments masked in  .env file to setup the database.
 2. Exported the module "pool" from dabase.js file to user_service.js file. Defined a create function that has two arguments, data and a call back function.
@@ -18,7 +18,7 @@ API End points:
 in our app.js file by importing the router.
 10. From our app.js file, the router for users/register has been setup and renedered on the server with the given port.
 
-# users/login:[POST]:
+# users/login [POST]:
 
 1. The database is well setup and we stored the data given by the user as each row in the table.
 2. 'getUserByUserEmail' function is defined in the user_service which has two arguments email and a callBack func. The value for the email argument is passed by the query result from the table.
@@ -34,7 +34,7 @@ in our app.js file by importing the router.
 in our app.js file by importing the router.
 12. From our app.js file, the router for users/login has been setup and rendered on the server with the given port.  
      
-# users/profile:[GET]: 
+# users/profile [GET]: 
 1. getUsers function is defined which has the callBack as its argument. The callBack leads to query which will return the users in the table and the parameters, error and results to catch and return the error and results respectively.
 2. getUsers function is exported to user_controller.
 3. getUsers controller is defined which has req and res, the user passes the JWT token as the authentication and the res argument of the controller ensures that the results has the users data from the database.
@@ -43,7 +43,7 @@ in our app.js file by importing the router.
 in our app.js file by importing the router.
 6. From our app.js file, the router for users/profile has been setup and rendered on the server with the given port.
 
-# users/update:[PUT]:
+# users/update [PUT]:
 1. updateData function is defined which has the data and the callBack arguments. The query method applied on the pool module is used to update changes on user data stored in the database.
 2. The data provided by the user is stored in the data array and it's been updated in our database. The error and the results parameter of the callBack are used to catch and return the error statements and the results of the query respectively.
 3. 'updateUser' controller has the user provided data and it's been assigned to the const body variable. 
@@ -54,6 +54,9 @@ in our app.js file by importing the router.
 in our app.js file by importing the router.
 8. From our app.js file, the router for user/update has been setup and rendered on the server with the given port.
 
+Tested the APIs in Postman
+
+Postman Url Link: (https://web.postman.co/workspace/My-Workspace~a092db62-373d-41d1-89a4-2f7a67aa1017/collection/38136116-6298d1ca-81ae-4c36-81ad-7c042dc975cc)
 
 
 
